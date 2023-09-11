@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-def new_in_list(my_list, idx, element):
-    copylist = my_list[:]
-    if idx >= 0 and idx <= len(copylist) - 1:
-        copylist[idx] = element
-        return copylist
+if my_list:
+    copy = []
+    copy = my_list[:]
+    if idx < 0 or idx >= len(my_list):
+        return copy
+    else:
+        copy[idx] = element
+        return copy
